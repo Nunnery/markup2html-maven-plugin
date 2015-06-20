@@ -65,6 +65,13 @@
         </dependency>
 
         <dependency>
+            <groupId>org.pegdown</groupId>
+            <artifactId>pegdown</artifactId>
+            <version>1.5.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
@@ -87,8 +94,8 @@
                 <version>3.3</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>${project.build.javaVersion}</source>
+                    <target>${project.build.javaVersion}</target>
                 </configuration>
             </plugin>
             <plugin>
