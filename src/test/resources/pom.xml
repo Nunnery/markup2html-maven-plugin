@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tealcube.java</groupId>
+    <artifactId>markdown2html-test</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Markdown2HtmlMojo Test Project</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <type>jar</type>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>markup2html-maven-plugin</artifactId>
+                <configuration>
+                    <sourceDirectory>src/test/resources/markdown</sourceDirectory>
+                    <jsDirectory>src/test/resources/javascript</jsDirectory>
+                    <cssDirectory>src/test/resources/css</cssDirectory>
+                    <outputDirectory>target/html</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
